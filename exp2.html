@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            height: 1080px;
+            width: 1920px;
+        }
+        video{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: fill;
+            display:block;
+            height:1080px;
+            width:1920px;
+            z-index: -100; 
+            -webkit-filter: grayscale(20%);
+        }
+        #u409_vedio{
+            width:392px;
+            height:506px;
+        }
+        #u409 {
+            /* border-width:0px; */
+            position:absolute;
+            left:623px;
+            top:256px;
+            width:392px;
+            height:506px;
+            /* display:flex; */
+            /* font-size:20px; */
+        }
+        </style>
+</head>
+<body>
+    <div id="pos" style="position:absolute;height: 1080px;width: 1920px;background: url('./img/back.png');z-index:-1;">
+        <video id="ve" src="vedio/转场.mp4" autoplay muted ></video>
+        <botton onclick="toggleFullScreen();"style="display:block;width: 30px;height:30px;background-color:black;"></botton>
+        <div id="u409" >
+            <video  id="u409_vedio" autoplay muted>
+                <source src="./vedio/转场.mp4" type="video/mp4">
+            </video>
+        </div>
+    
+    </div>
+    
+</body>
+<script>
+    function change(){
+        console.log(document.getElementById("ve"));
+        document.getElementById("ve").src="vedio/转场.mp4";
+        document.getElementById("ve").play();
+    }
+    function toggleFullScreen() {
+            // if(document.getElementById("pos").zoom=0.5){
+                var body_w=1920;
+                $(document).ready(function(){ 
+                    $('pos').css("zoom", screen.width/body_w); 
+                }); 
+                console.log(1);
+                    var content = document.getElementById('pos'); //map时我想要全屏的元素的id
+                    fullScreen(content); 
+            }
+            // else {
+            //   console.log("heheheh");
+            //   $(document).ready(function(){ 
+            //         $('pos').css("zoom", 0.5); 
+            //     }); 
+            //     exitFullscreen();
+            // }
+                
+        // }
+        function fullScreen(el) {
+            var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen, 
+            wscript; 
+            if(typeof rfs != "undefined" && rfs) {
+                rfs.call(el); 
+                return; 
+            } 
+            if(typeof window.ActiveXObject != "undefined") {
+                wscript = new ActiveXObject("WScript.Shell"); 
+                if(wscript) { 
+                    wscript.SendKeys("{F11}"); 
+                }
+            }
+        }
+        //监听窗口退出全屏解决无法监听Esc按键
+        window.onresize = function(){
+          if(!checkFull()){
+          //要执行的动作
+          $('body').css("zoom", 0.5); 
+            $('#FullScreen').html('<i class="larry-icon larry-quanping">&#xe72f;</i>全屏');
+          }
+        }
+      
+        function checkFull(){
+          var isFull =
+            document.fullscreenElement ||
+            document.mozFullScreenElement ||
+            document.webkitFullscreenElement;
+        //to fix : false || undefined == undefined
+          if(isFull === undefined) isFull = false;
+          return isFull;
+        }
+</script>
+
+</html>

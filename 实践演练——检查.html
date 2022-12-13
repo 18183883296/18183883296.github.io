@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>实践演练—之检查</title>
+    <link href="./css/实践演练——检查.css" type="text/css" rel="stylesheet"/>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  </head>
+ <!-- #region 标记 --> 
+  <style>
+    #u000{
+      border-width:0px;
+      position:absolute;
+      left:1331px;
+      top:224px;
+      width:519px;
+      height:300px;
+      background:inherit;
+      background-color:rgba(255, 255, 255, 1);
+      box-sizing:border-box;
+      border-width:1px;
+      border-style:solid;
+      border-color:rgba(121, 121, 121, 1);
+      border-radius:0px;
+      -moz-box-shadow:none;
+      -webkit-box-shadow:none;
+      box-shadow:none;
+      font-size:20px;
+      text-align:left;
+    }
+    #u001{
+      border-width:0px;
+      position:absolute;
+      left:1331px;
+      top:550px;
+      width:519px;
+      height:220px;
+      background:inherit;
+      background-color:rgba(255, 255, 255, 1);
+      box-sizing:border-box;
+      border-width:1px;
+      border-style:solid;
+      border-color:rgba(121, 121, 121, 1);
+      border-radius:0px;
+      -moz-box-shadow:none;
+      -webkit-box-shadow:none;
+      box-shadow:none;
+      font-size:20px;
+      text-align:left;
+    }
+    #u002{
+      border-width:0px;
+      position:absolute;
+      left:1331px;
+      top:790px;
+      width:519px;
+      height:110px;
+      background:inherit;
+      background-color:rgba(255, 255, 255, 1);
+      box-sizing:border-box;
+      border-width:1px;
+      border-style:solid;
+      border-color:rgba(121, 121, 121, 1);
+      border-radius:0px;
+      -moz-box-shadow:none;
+      -webkit-box-shadow:none;
+      box-shadow:none;
+      font-size:20px;
+      text-align:left;
+    }
+    #fade{
+      /* display: none; */
+      /* 此元素不会被显示*/
+      position:absolute;
+      top: 256px;
+      left: 1440px;
+      width: 40px;
+      height:40px;
+      background-color: #bf2323;
+      z-index: 1001;
+      /* z-index 属性设置元素的堆叠顺序。*/
+      opacity: .80;
+      /* opacity 属性设置元素的不透明级别。*/
+		}
+    #fade2{
+      /* display: none; */
+      /* 此元素不会被显示*/
+      position:absolute;
+      top: 296px;
+      left: 1430px;
+      width: 40px;
+      height:40px;
+      background-color: #bf2323;
+      z-index: 1001;
+      /* z-index 属性设置元素的堆叠顺序。*/
+      opacity: .80;
+      /* opacity 属性设置元素的不透明级别。*/
+    }
+    #show1{
+      position:absolute;
+      border: 2px solid;
+      border-color: rgb(12, 11, 11);
+      background-color:rgb(224, 118, 118);
+      border-radius: 2;
+      height:30px;
+      width: 300px;
+      font-size: 20px;
+      left:878px;
+      top: 286px;
+    }
+    #show2{
+      position:absolute;
+      border: 2px solid;
+      border-color: rgb(12, 11, 11);
+      background-color:rgb(224, 118, 118);
+      border-radius: 2;
+      height:30px;
+      width: 300px;
+      font-size: 20px;
+      left:878px;
+      top: 106px;
+    }
+    #bot1{
+      position:absolute;
+      border: 2px solid;
+      border-color: black;
+      /* background-color:black; */
+      left:388px;
+      top: 196px;
+      height: 180px;
+      width: 100px;
+
+    }
+    #bot2{
+      position:absolute;
+      border: 2px solid;
+      border-color: black;
+      /* background-color:black; */
+      left:420px;
+      top: 60px;
+      height: 150px;
+      width: 30px;
+
+    }
+    .item{
+            height:100px;
+            width:200px;
+            position: absolute;
+            z-index: 2;
+        }
+    .line{
+            position:absolute;
+            background:green;
+            height:1px;
+            z-index: 1;/*这里设置大于2，即可看到真正连线的其实是两个元素的中心坐标*/
+        }
+  </style>
+  <!-- #endregion-->
+  <body id="body">
+    <!-- <div id="base" class=""> -->
+      <!-- Unnamed (矩形) -->
+    <div id="u186" style="background:url(./img/back2.png);background-size: 100% 100%;"class="ax_default box_1">
+        <div id="u186_div" class=""></div>
+        <div id="u186_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      <!-- </div> -->
+
+      <!-- Unnamed (矩形) -->
+      <div id="u187" style="background:url(./img/古纸.png);background-size: 100% 100%;"class="ax_default box_1">
+        <div id="u187_div" class=""></div>
+        <div id="u187_text" class="text ">
+          <p style="text-align: center;"><span style="text-decoration:none;">登记</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u188" style="background:url(./img/古纸.png);background-size: 100% 100%;"class="ax_default box_1">
+        <div id="u188_div" class=""></div>
+        <div id="u188_text" class="text ">
+          <p style="text-align: center;"><span style="text-decoration:none;">检查</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u189" style="background:url(./img/古纸.png);background-size: 100% 100%;"class="ax_default box_1">
+        <div id="u189_div" class=""></div>
+        <div id="u189_text" class="text ">
+          <p style="text-align: center;"><span style="text-decoration:none;">制定修复方案</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u190" style="background:url(./img/古纸.png);background-size: 100% 100%;"class="ax_default box_1">
+        <div id="u190_div" class=""></div>
+        <div id="u190_text" class="text ">
+          <p style="text-align: center;"><span style="text-decoration:none;">调配浆糊</span></p>
+        </div>
+      </div>
+
+      <!-- 确定纸张类型 -->
+      <div id="u199-pre" style="display: block;" class="ax_default" data-label="破损程度检查" data-left="24" data-top="2405" data-width="446" data-height="428">
+        
+        <!-- Unnamed (矩形) -->
+        <div id="u191" class="ax_default box_1">
+          <div id="u191_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u191_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u192" class="ax_default _文本段落">
+          <div id="u192_div" class=""></div>
+          <div id="u192_text" class="text ">
+            <p><span style="margin-left:0px;text-decoration:none;">①检查纸张所属类型</span></p>
+            <p><span style="text-decoration:none;">②进行修复用纸的配纸与染色</span></p>
+            <p><span style="text-decoration:none;">③将处理好后的修复用纸保存备用</span></p>
+            <p><span style="text-decoration:none;"><br></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u193" class="ax_default _文本段落">
+          <div id="u193_div" class=""></div>
+          <div id="u193_text" class="text ">
+            <p ><span style="text-decoration:none;">确定纸张类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u194" class="ax_default _文本段落">
+          <div id="u194_div" class=""></div>
+          <div id="u194_text" class="text ">
+            <p><span style="text-decoration:none;">1/3</span></p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- 破损程度检查 (组合) -->
+      <div id="u199" style="display: none;"class="ax_default" data-label="破损程度检查" data-left="24" data-top="1000" data-width="446" data-height="428">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u200" class="ax_default box_1">
+          <div id="u200_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u200_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u201" class="ax_default _文本段落">
+          <div id="u201_div" class=""></div>
+          <div id="u201_text" class="text ">
+            <p style="display: inline;"><span style="text-decoration:none;"></br>根据《纸质档案抢救与修复规范 第1部分：破损等级的划分》（DA/T 64.1-2017），档案破损程度分为4级，由重至轻分别为：</span></p>
+            <p ><span style="text-decoration:none;">特残破损、严重破损、中度破损和轻度破损。</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u202" class="ax_default _文本段落">
+          <div id="u202_div" class=""></div>
+          <div id="u202_text" class="text ">
+            <p><span style="text-decoration:none;">确定纸张破损程度</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u203" class="ax_default _文本段落">
+          <div id="u203_div" class=""></div>
+          <div id="u203_text" class="text ">
+            <p><span style="text-decoration:none;">2/3</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u204" class="ax_default box_1">
+          <div id="u204_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u204_text" class="text ">
+            <p onclick="show_table();"><span style="text-decoration:none;">查看档案破损参考表</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="udocument" class="ax_default box_1">
+          <div id="udocument_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="udocument_text" class="text ">
+            <p onclick="show_question();"><span style="text-decoration:none;">档案分类</span></p>
+          </div>
+        </div>
+
+      </div>
+
+      
+<!-- #endregion -->
+      <!-- 提示1 (矩形) -->
+      <div id="u205" style="background:url(./img/长古纸.png);background-size: 100% 100%;"class="ax_default box_2" data-label="提示1">
+        <div id="u205_div" class=""></div>
+        <div id="u205_text" class="text ">
+          <p><span id="gai" style="text-decoration:none;">请观察档案，检查纸张类型并选择匹配的补纸。</span></p>
+        </div>
+      </div>
+
+      
+      <div id="middle" style="display: block;">
+        <!-- Unnamed (矩形) -->
+        <div id="u207" class="ax_default box_1">
+          <div id="u207_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u207_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (占位符) -->
+        <div id="u276" class="ax_default placeholder">
+          <img id="u276_img" class="img " src="./img/待修复.png"/>
+          <div id="u276_text" class="text ">
+            <p><span style="text-decoration:none;"></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u208" style="display: block;"class="ax_default box_1">
+          <div id="u208_div"onclick="error();" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u208_text" class="text ">
+            <p  style="text-align: center;"><span style="text-decoration:none;">竹纸</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u209" style="display: block;"class="ax_default box_1">
+          <div id="u209_div" onclick="error();"style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u209_text" class="text ">
+            <p  style="text-align: center;"><span style="text-decoration:none;">皮纸</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u210" style="display: block;"class="ax_default box_1">
+          <div id="u210_div" onclick="correct();"style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u210_text" class="text ">
+            <p  style="text-align: center;"><span style="text-decoration:none;">棉纸</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u231" style="display: none;" class="ax_default box_1">
+          <div id="u231_div" onclick="correct2();"style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u231_text" class="text ">
+            <p ><span style="text-decoration:none;">浅黄色棉纸</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u232" style="display: none;" class="ax_default box_1">
+          <div id="u232_div" onclick="error();"style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u232_text" class="text ">
+            <p ><span style="text-decoration:none;">纯白色棉纸</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u233" style="display: none;" class="ax_default box_1">
+          <div id="u233_div" onclick="error();"style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u233_text" class="text ">
+            <p ><span style="text-decoration:none;">黄色棉纸</span></p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="liter" style="display:block;">
+          <div style="background:url(./img/古纸.png);background-size: 100% 100%;"id="u000" >
+            <div id="u211_text" class="text ">
+              <p style="margin-left: 30px;margin-right:30px;"><span style="text-decoration:none;padding-left: 2px;">棉纸：又称宣纸。白色或淡黄色。有韧性，光而不滑，洁白稠密，纹理纯净，具有渗透、润滑性能。棉纸以树皮为原料，纤维长，有拉力，纸薄而柔韧，修裱后档案耐久性较强。</span></p>
+              <p style="margin-left: 30px;margin-right:30px;"><span style="text-decoration:none;">包括：净皮棉连纸、净皮单宣纸、净皮重宣纸、净皮夹宣纸、净皮棉连纸、棉料单宣纸、棉料重宣纸、四川夹江生宣纸、四川夹江麻宣纸、河南棉纸、云南棉纸、贵州周寨白棉纸、安徽熟宣纸、安徽荧光熟宣纸、四川夹江云母熟宣纸。</span></p>
+            </div>
+          </div>
+          <div style="background:url(./img/古纸.png);background-size: 100% 100%;"id="u001" >
+            <div id="u211_text" class="text ">
+              <p style="margin-left: 30px;margin-right:30px;"><span style="text-decoration:none;">竹纸：包括毛边纸和元书纸。毛边纸是竹料纸，经石灰发酵，加适量黄色染料，以竹帘手工抄造成纸，纸的一面光滑，另一面较涩，其吸水性强，但韧性较差；元书纸古称赤亭纸。主产于浙江省富阳市，生产历史悠久。洁白柔韧、落水易溶、着墨不渗、久藏不蛀、不变色。可作裱装画轴及上等包装纸等。</span></p>
+            </div>
+          </div>
+          <div style="background:url(./img/古纸.png);background-size: 100% 100%;"id="u002" >
+            <div id="u211_text" class="text ">
+              <p style="margin-left: 30px;margin-right:30px;"><span style="text-decoration:none;">皮纸：白色，强度高。皮纸是一种以树皮为原料，经手工抄制而成的纸，该纸轻、薄、抗湿强度高，如温州皮纸。</span></p>
+            </div>
+          </div>
+      </div>
+
+
+      <!-- 提示2 (矩形) -->
+      <div id="u218" style="display: none;" class="ax_default box_2" data-label="提示2" v-if="showDetail">
+        <div id="u218_div" class=""></div>
+        <div id="u218_text" class="text ">
+          <p><span style="text-decoration:none;">选择错误，请重新选择。</span></p>
+        </div>
+      </div>
+
+
+      <!-- Unnamed (矩形) -->
+      <div id="u236" class="ax_default box_1" style="display: none;background:url(./img/古纸.png);background-size: 100% 100%;">
+        <div id="u236_div" style="background:url(./img/待修复.png);background-size: cover;"class=""></div>
+        <!-- <div id="u236_text" class="text ">
+          <p><span style="text-decoration:none;">档案模型</span></p>
+        </div> -->
+        <div id="show1" style="display:block">中度破损，5%<=破损面积<=20%</div>
+        <div id="show2" style="display:block">中度褶皱，5%<=褶皱面积<=20%</div>
+        <div class='line' 
+          style="top:109.75px;left:438.8946466654827px;width:570.2107066690347px;transform:rotate(181.55765926143596deg);">
+        </div>
+        <div class='line' 
+                  style='top:300px;left:435.4288206680662px;width:593.6423586638676px;transform:rotate(178.74519621483537deg);'>
+        </div>
+        <div id="bot1" ></div>
+        <div id="bot2" ></div>
+      </div>
+      
+
+      <div id="question" style="display: none;">
+          <div id="fade2" onclick="hid_question();" class="black_overlay" ></div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u262" class="ax_default box_1">
+            <div id="u262_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+            <div id="u262_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 档案说明 (矩形) -->
+          <div id="u263" class="ax_default _文本段落" data-label="档案说明">
+            <div id="u263_div" class=""></div>
+            <div id="u263_text" class="text ">
+              <ul><li style=""><span style="font-family:'Arial Normal', 'Arial';font-weight:400;text-decoration:none;">轻微破损，破损面积≤5%；</span></li><li style=""><span style="font-family:'Arial Normal', 'Arial';font-weight:400;text-decoration:none;">轻微污染，污染面积≤5%；</span></li><li style=""><span style="font-family:'Arial Normal', 'Arial';font-weight:400;text-decoration:none;">字迹洇化不影响识读；</span></li><li style=""><span style="font-family:'Arial Normal', 'Arial';font-weight:400;text-decoration:none;">轻微褶皱，褶皱面积≤5%。</span></li></ul><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;text-decoration:none;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial';font-weight:700;text-decoration:none;">&nbsp;&nbsp; &nbsp; </span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u285" class="ax_default _一级标题">
+            <div id="u285_div" class=""></div>
+            <div id="u285_text" class="text ">
+              <p><span style="text-decoration:none;">&nbsp; 本档案属于：</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u286" class="ax_default button">
+            <div id="u286_div" class=""></div>
+            <div id="u286_text" class="text ">
+              <p onclick="get_chose(1,u286_div);"><span style="text-decoration:none;">轻度破损</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u287" class="ax_default button">
+            <div id="u287_div" class=""></div>
+            <div id="u287_text" class="text ">
+              <p onclick="get_chose(2,u287_div);"><span style="text-decoration:none;">中度破损</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u288" class="ax_default button">
+            <div id="u288_div" class=""></div>
+            <div id="u288_text" class="text ">
+              <p onclick="get_chose(3,u288_div);"><span style="text-decoration:none;">严重破损</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u289" class="ax_default button">
+            <div id="u289_div" class=""></div>
+            <div id="u289_text" class="text ">
+              <p onclick="get_chose(4,u289_div);"><span style="text-decoration:none;">特残破损</span></p>
+            </div>
+          </div>
+
+          <div id="uwrong_anser" style="display:none;" class="ax_default button">
+            <!-- <div id="uwrong_anser_div" class=""></div> -->
+            <div id="uwrong_anser_text" class="text ">
+              <span style="text-decoration:none;color: #bf2323;">答案错误，请重新选择</span>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u290" class="ax_default primary_button">
+            <div id="u290_div" class=""></div>
+            <div id="u290_text" class="text ">
+              <p onclick="decide_chose();"><span style="text-decoration:none;">确定</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u265" class="ax_default _文本段落">
+            <div id="u265_div" class=""></div>
+            <div id="u265_text" class="text ">
+              <p><span style="text-decoration:none;">破损程度检查结果：</span></p>
+            </div>
+          </div>
+      </div>
+
+      
+
+      
+
+      <!-- Unnamed (形状) -->
+      <div id="u266" class="ax_default icon">
+        <img id="u266_img" class="img " src="images/工具库/u32.svg"/>
+        <div id="u266_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u267" onclick="toggleFullScreen()" class="ax_default icon">
+        <img id="u267_img" class="img " src="images/主页/u2.svg"/>
+        <div id="u267_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      
+
+      <!-- 流程组 (组合) -->
+      <div id="u270" class="ax_default" data-label="流程组" data-left="24" data-top="23" data-width="817" data-height="73">
+
+        <!-- Unnamed (形状) -->
+        <div id="u271" class="ax_default primary_button">
+          <img id="u271_img" class="img " src="images/1_登记/u180.svg"/>
+          <div id="u271_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u272" class="ax_default primary_button">
+          <img id="u272_img" class="img " src="images/1_登记/u180.svg"/>
+          <div id="u272_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u273" style="background:url(./img/古纸.png);background-size: 100% 100%;"class="ax_default box_1">
+          <div id="u273_div" class=""></div>
+          <div id="u273_text" class="text ">
+            <p style="text-align: center;"><span style="text-decoration:none;">前期准备</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u274" style="background:url(./img/古纸.png);background-size: 100% 100%;"class="ax_default box_1">
+          <div id="u274_div" class=""></div>
+          <div id="u274_text" class="text ">
+            <p style="text-align: center;"><span style="text-decoration:none;">去污</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u275" style="background:url(./img/古纸.png);background-size: 100% 100%;"class="ax_default box_1">
+          <div id="u275_div" class=""></div>
+          <div id="u275_text" class="text ">
+            <p style="text-align: center;"><span style="text-decoration:none;">修补托裱</span></p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- Unnamed (矩形) -->
+      <!-- <div id="u277" class="ax_default primary_button">
+        <div id="u277_div" class=""></div>
+        <div id="u277_text" class="text ">
+          <p><span style="text-decoration:none;">确认选择</span></p>
+        </div>
+      </div> -->
+
+      
+
+      <!-- 破损程度检查 (组合) -->
+      <div id="u295" style="display: none;"class="ax_default" data-label="破损程度检查" data-left="29" data-top="4421" data-width="446" data-height="428">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u296" class="ax_default box_1">
+          <div id="u296_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+          <div id="u296_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u297" class="ax_default _文本段落">
+          <div id="u297_div" class=""></div>
+          <div id="u297_text" class="text ">
+            <p><span style="text-decoration:none;">可通过试纸法和冷萃取法检查破损档案的酸碱性。</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u298" class="ax_default _文本段落">
+          <div id="u298_div" class=""></div>
+          <div id="u298_text" class="text ">
+            <p><span style="text-decoration:none;">检测纸质档案酸碱性</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u299" class="ax_default _文本段落">
+          <div id="u299_div" class=""></div>
+          <div id="u299_text" class="text ">
+            <p><span style="text-decoration:none;">3/3</span></p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div id="page3_middle" style="display:none;">
+          <!-- Unnamed (矩形) -->
+          <div id="u311" class="ax_default box_1">
+            <div id="u311_div" style="background:url(./img/古纸.png);background-size: 100% 100%;"class=""></div>
+            <div id="u311_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u312" class="ax_default _一级标题">
+            <div id="u312_div" class=""></div>
+            <div id="u312_text" class="text ">
+              <p><span style="text-decoration:none;">&nbsp;&nbsp; &nbsp; &nbsp; 1.试纸法：用蒸馏水（pH=7）湿润档案纸张或pH试</span></p><p><span style="text-decoration:none;">纸，然后用试纸与档案纸张贴紧，压实片刻，根据试纸颜</span></p><p><span style="text-decoration:none;">色与pH试纸上的对比色卡进行比对，判断pH值。</span></p><p><span style="text-decoration:none;">&nbsp;&nbsp; &nbsp;&nbsp; 2.冷萃取法：将5克风干的纸张浸泡在蒸馏水中，在20</span></p><p><span style="text-decoration:none;">℃-30℃下放置1小时，纸张中的酸被萃取于水中，然后用</span></p><p><span style="text-decoration:none;">pH计测定水溶液pH值。</span></p><p><span style="text-decoration:none;">&nbsp;&nbsp; &nbsp; &nbsp; 若对pH值准确度要求不高，可以选择试纸法；冷萃取</span></p><p><span style="text-decoration:none;">法可测得准确的pH值，但档案可能受到破坏。</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u313" onclick="window.location.href='./实践演练——制定修复方案.html'" class="ax_default primary_button">
+            <div id="u313_div" class=""></div>
+            <div id="u313_text" class="text ">
+              <p><span style="text-decoration:none;">已了解</span></p>
+            </div>
+          </div>
+      </div>
+      
+
+      <div id="bound" style="display: none;margin-left:500px;margin-top:256px;">
+        <div id="fade" onclick="hid_table();" class="black_overlay" ></div>
+        <div style=" position:absolute;overflow-y:auto; overflow-x:auto; width:1000px; height:700px;">
+            
+            <div><img src="./img/破损表.png" width="1000px"></div>
+            
+        </div>
+      </div>
+    </div>
+    <script>
+        // document.getElementsByTagName('body')[0].style.zoom=0.5;
+        function correct(){
+          console.log(1);
+          document.getElementById("gai").innerHTML="请选择与档案纸张颜色相近的补纸";
+          document.getElementById("u218").style.display="none";
+          document.getElementById("u208").style.display="none";
+          document.getElementById("u209").style.display="none";
+          document.getElementById("u210").style.display="none";
+          document.getElementById("u231").style.display="block";
+          document.getElementById("u232").style.display="block";
+          document.getElementById("u233").style.display="block";
+        }
+        function correct2(){
+          document.getElementById("gai").innerHTML="请查看档案破损参考表，请点击查看所有破损污渍点，请进行档案破损分类。";
+          document.getElementById("u218").style.display="none";
+          document.getElementById("u199-pre").style.display="none";
+          document.getElementById("u199").style.display="block";
+          document.getElementById("u189").style.top="690px";
+          document.getElementById("u190").style.top="756px";
+          document.getElementById("middle").style.display="none";
+          document.getElementById("u236").style.display="block";
+          document.getElementById("liter").style.display="none";
+          // $("body").append(drawLine($("#show1"),$("#bot1")));
+          // $("body").append(drawLine($("#show2"),$("#bot2")));
+        }
+        function error(){
+          setTimeout(function(){
+                $("#u218").css('display','block');},0);
+            setTimeout(function(){
+                $("#u218").css('display','none');},2000);
+            // $(id_n).css('background-color','white');
+          // console.log(0);
+          // document.getElementById("u218").style.display="";
+        }
+        function show_table(){
+            document.getElementById("bound").style.display="block";
+            document.getElementById("u236").style.display="none";
+
+        }
+        function hid_table(){
+            document.getElementById("bound").style.display="none";
+            document.getElementById("u236").style.display="block";
+        }
+        function show_question(){
+            document.getElementById("question").style.display="block";
+            document.getElementById("u236").style.display="none";
+        }
+        function hid_question(){
+            document.getElementById("question").style.display="none";
+            document.getElementById("u236").style.display="block";
+        }
+        var chose=false;var id_n;
+        function get_chose(k,idd){
+            if(id_n!=undefined){
+              $(id_n).css('background-color','white');
+            }
+            id_n=idd;
+            $(idd).css('background-color','red');
+            if(k==2) {
+              chose=true;
+            }
+            else chose=false;
+        }
+        function decide_chose(){
+            if(chose==true) page3();
+            else {
+              delay();
+            }
+        }
+        function delay(){
+            setTimeout(function(){
+                $("#uwrong_anser").css('display','block');},0);
+            setTimeout(function(){
+                $("#uwrong_anser").css('display','none');},2000);
+            $(id_n).css('background-color','white');
+        }
+        function page3(){
+          document.getElementById("gai").innerHTML="了解检测纸质档案酸碱性方法。";
+          document.getElementById("u199").style.display="none";
+          document.getElementById("u295").style.display="block";
+          document.getElementById("question").style.display="none";
+
+          document.getElementById("page3_middle").style.display="block";
+          
+
+        }
+        function toggleFullScreen() {
+            if(document.getElementById("body").zoom=0.5){
+                var body_w=1920;
+                $(document).ready(function(){ 
+                    $('body').css("zoom", screen.width/body_w); 
+                }); 
+
+                    var content = document.getElementById('body'); //map时我想要全屏的元素的id
+                    fullScreen(content); 
+            }
+            else {
+              console.log("heheheh");
+              $(document).ready(function(){ 
+                    $('body').css("zoom", 0.5); 
+                }); 
+                exitFullscreen();
+            }
+                
+        }
+        function fullScreen(el) {
+            var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen, 
+            wscript; 
+            if(typeof rfs != "undefined" && rfs) {
+                rfs.call(el); 
+                return; 
+            } 
+            if(typeof window.ActiveXObject != "undefined") {
+                wscript = new ActiveXObject("WScript.Shell"); 
+                if(wscript) { 
+                    wscript.SendKeys("{F11}"); 
+                }
+            }
+        }
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+            }
+        }
+        function ret(){
+          console.log("has in");
+          $(document).ready(function(){ 
+                    $('body').css("zoom", 0.5); 
+                });
+        }
+        //监听窗口退出全屏解决无法监听Esc按键
+        window.onresize = function(){
+          if(!checkFull()){
+          //要执行的动作
+          $('body').css("zoom", 0.5); 
+            $('#FullScreen').html('<i class="larry-icon larry-quanping">&#xe72f;</i>全屏');
+          }
+        }
+      
+        function checkFull(){
+          var isFull =
+            document.fullscreenElement ||
+            document.mozFullScreenElement ||
+            document.webkitFullscreenElement;
+        //to fix : false || undefined == undefined
+          if(isFull === undefined) isFull = false;
+          return isFull;
+        }
+
+        function drawLine(startObj, endObj) {
+          console.log("draw");
+            //起点元素中心坐标
+            var y_start =  Number(startObj.css("top").replace("px","")) + startObj.height()/2;
+            var x_start =  Number(startObj.css("left").replace("px","")) + startObj.width()/2;
+            // var y_start =  Number(startObj.top) + startObj.height/2;
+            // var x_start =  Number(startObj.left) + startObj.width/2;
+    
+            //终点元素中心坐标
+            var y_end =  Number(endObj.css("top").replace("px","")) + endObj.height()/2;
+            var x_end =  Number(endObj.css("left").replace("px",""))+ endObj.width()/2;;
+            // console.log(endObj);
+            // var y_end =  Number(endObj.top) + endObj.height/2;
+            // var x_end =  Number(endObj.left)+ endObj.width/2;;
+    
+            //用勾股定律计算出斜边长度及其夹角（即连线的旋转角度）
+            var lx = x_end - x_start;
+            var ly = y_end - y_start;
+            //计算连线长度
+            var length = Math.sqrt(lx * lx + ly * ly); 
+            //弧度值转换为角度值
+            var c = 360 * Math.atan2(ly, lx) / (2 * Math.PI); 
+    
+            //连线中心坐标
+            var midX=(x_end+x_start)/2;
+            var midY=(y_end+y_start)/2
+            var deg = c <= -90 ? (360 + c) : c;  //负角转换为正角
+
+            console.log(midY+256);
+            console.log((midX-length/2)+521);
+            console.log(length);
+            console.log(deg);
+            return `<div class='line' 
+                        style='top:${midY+256}px;left:${(midX-length/2)+521}px;width:${length}px;transform:rotate(${deg}deg);'>
+                    </div>`
+        }
+        
+        // $(document).ready(function(){
+        //         $("#bot1").hover(function(){document.getElementById("show1").style.display="block";},
+        //                         function(){document.getElementById("show1").style.display="none";}
+        //                         );
+        //     });
+        
+        $(document).ready(function(){ 
+             $('body').css("zoom", 0.5); 
+        }); 
+        console.log(document.getElementsByTagName('body')[0].style.zoom);
+    </script>
+    <!-- <script src="resources/scripts/axure/ios.js"></script> -->
+  </body>
+</html>
