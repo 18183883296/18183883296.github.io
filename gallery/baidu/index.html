@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<meta charset=UTF-8><title>使用百度搜索</title>
+<meta content="width=600,user-scalable=no" name=viewport>
+<meta content=百度一下,教你百度搜索 name=keywords>
+<style>body, html {
+    background: #fff
+}
+
+button, html, input {
+    font: 200 1em 微软雅黑, sans-serif
+}
+
+h1 {
+    background: url(images/baidu.svg) no-repeat;
+    width: 500px;
+    height: 120px;
+    font-size: 48px;
+    line-height: 120px;
+    font-weight: 600;
+    text-align: center;
+    margin: 3em auto 1em;
+    color: transparent;
+    position: relative
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 120px;
+    width: 280px;
+    border-left: 110px solid #fff;
+    border-right: 110px solid #fff;
+    opacity: 0;
+    animation: in 2s ease
+}
+
+@keyframes in {
+    50%, from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+form {
+    background: #0076ff;
+    border-radius: 7px;
+    position: relative;
+    width: 540px;
+    margin: 0 auto
+}
+
+form input {
+    -webkit-appearance: none;
+    border: 0;
+    margin: 4px;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 7px 13px;
+    vertical-align: top;
+    border-radius: 4px;
+    width: 407px
+}
+
+form input:focus {
+    outline: 0
+}
+
+form input::-webkit-search-decoration {
+    display: none
+}
+
+form button {
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+    line-height: 52px;
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+    background: 0 0;
+    color: #fff;
+    vertical-align: top;
+    cursor: pointer
+}
+
+#提示文字 {
+    font-size: 1.4em;
+    text-align: center;
+    color: #999;
+    padding: 3em 0 5em
+}
+
+#鼠标 {
+    background: url(images/mouse.svg) no-repeat;
+    width: 25px;
+    height: 40px;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 0;
+    pointer-events: none;
+    transition: top 1s ease, left 1s ease
+}
+
+#鼠标 b {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    z-index: -1;
+    border-radius: 9em;
+    box-shadow: 0 0 0 7px rgba(0, 0, 0, .4);
+    width: 50px;
+    height: 50px;
+    opacity: 0
+}
+
+#鼠标.左键点击 b {
+    animation: scale 1s ease
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+        opacity: 1
+    }
+    5% {
+        opacity: 1
+    }
+    to {
+        transform: scale(3);
+        opacity: 0
+    }
+}
+
+#停一停 {
+    display: block;
+    margin: 0 auto;
+    background: 0 0;
+    color: #369;
+    border: 0;
+    cursor: pointer
+}
+
+#输出结果 {
+    background: #f8f8f8;
+    padding: 1em;
+    margin: 2em auto;
+    width: 600px;
+    border-radius: 4px;
+    transition: opacity .5s ease
+}
+
+#输出结果:empty {
+    opacity: 0
+}
+
+#输出结果 h3, #输出结果 p {
+    margin: 0
+}
+
+#输出结果 h3 {
+    padding-bottom: 10px
+}
+
+#输出结果 a {
+    color: #0076ff;
+    font-size: 12px;
+    display: inline-block;
+    max-width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+footer {
+    padding: 7em 0 4em;
+    font-size: 12px;
+    text-align: center
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 1em;
+    color: #999;
+    text-decoration: none
+}</style>
+<base target=_blank><h1>不会百度么？</h1>
+<form id=搜索框><input name=text placeholder=输入需要的关键字，例：吉林大学 type=search>
+    <button>百度一下</button>
+</form><p id=提示文字>在上面👆输入搜索关键字
+<div id=鼠标><b></b></div></button>
+<div id=输出结果></div>
+<script>
+    !function(){for(var t,n=encodeURIComponent,o=location.search.substr(1).split("&"),e=o.length,i={};e--;)t=o[e].split("="),i[t.shift()]=decodeURIComponent(t.join("="));i.ss;var s,a=function(t,n,o){var e=-1,i=function(){e++,item=t[e],item?n.call(e,item,i):o&&o()};i()},c=function(t,n){鼠标.style.cssText="top:"+t+"px;left:"+n+"px;"},u=function(t){提示文字.innerHTML=t},r=function(t,n){s=setTimeout(t,n)},f=搜索框.text,l=function(t){clearTimeout(s),f.value="",f.blur(),history.pushState({},t,location.pathname+"?s="+n(t)),c(搜索框.offsetTop+25,搜索框.offsetLeft+搜索框.offsetWidth/2),u("光标移至输入框，左键单击"),r(function(){鼠标.classList.add("左键点击"),r(function(){f.focus(),u("键入搜索关键字"),r(function(){鼠标.classList.remove("左键点击"),a(t.split(""),function(n,o){var e=this+1;f.value=t.substr(0,e),f.selectionStart=f.selectionEnd=e,r(o,50+250*Math.random())},function(){c(搜索框.offsetTop+25,搜索框.offsetLeft+搜索框.offsetWidth-60),u("点击「百度一下」按钮，进行搜索"),r(function(){鼠标.classList.add("左键点击"),u("等待跳转到搜索结果页..."),r(function(){location.href="https://www.baidu.com/s?wd="+n(t)},700)},1200)})},800)},100)},1100)};搜索框.onsubmit=function(t){t.preventDefault();var n=f.value.replace(/^\s+|\s+$/g,"");if(!n)return f.focus(),void u("请正确输入搜索关键词");l(n)};setTimeout(function(){d("https://www.hcw3.cn/")},1e3)}()
+</script>
+<footer><a href=../../index.html target="_parent">个人主页</a>
+	<a href=https://xydh.fun/DieHeart>炫猿网址导航</a>
+	<a href=https://www.processon.com/diagrams>ProcessOn在线作图</a>
+	<a href=https://mail.88.com>88完美邮箱</a>
+	<a href=https://postimages.org>Post图床</a>
+	<a href=https://github.com/18183883296>GitHub</a>
+</footer>
