@@ -197,6 +197,10 @@ footer a {
 <script>
     !function(){for(var t,n=encodeURIComponent,o=location.search.substr(1).split("&"),e=o.length,i={};e--;)t=o[e].split("="),i[t.shift()]=decodeURIComponent(t.join("="));i.ss;var s,a=function(t,n,o){var e=-1,i=function(){e++,item=t[e],item?n.call(e,item,i):o&&o()};i()},c=function(t,n){鼠标.style.cssText="top:"+t+"px;left:"+n+"px;"},u=function(t){提示文字.innerHTML=t},r=function(t,n){s=setTimeout(t,n)},f=搜索框.text,l=function(t){clearTimeout(s),f.value="",f.blur(),history.pushState({},t,location.pathname+"?s="+n(t)),c(搜索框.offsetTop+25,搜索框.offsetLeft+搜索框.offsetWidth/2),u("光标移至输入框，左键单击"),r(function(){鼠标.classList.add("左键点击"),r(function(){f.focus(),u("键入搜索关键字"),r(function(){鼠标.classList.remove("左键点击"),a(t.split(""),function(n,o){var e=this+1;f.value=t.substr(0,e),f.selectionStart=f.selectionEnd=e,r(o,50+250*Math.random())},function(){c(搜索框.offsetTop+25,搜索框.offsetLeft+搜索框.offsetWidth-60),u("点击「百度一下」按钮，进行搜索"),r(function(){鼠标.classList.add("左键点击"),u("等待跳转到搜索结果页..."),r(function(){location.href="https://www.baidu.com/s?wd="+n(t)},700)},1200)})},800)},100)},1100)};搜索框.onsubmit=function(t){t.preventDefault();var n=f.value.replace(/^\s+|\s+$/g,"");if(!n)return f.focus(),void u("请正确输入搜索关键词");l(n)};setTimeout(function(){d("https://www.hcw3.cn/")},1e3)}()
 </script>
+<!--HTML5 canvas点击爆炸特效-->
+<canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;">
+    </canvas>
+<script type="text/javascript" src="js/baozha.js"></script>
 <footer><a href=../../index.html target="_parent">个人主页</a>
 	<a href=https://xydh.fun/DieHeart>炫猿网址导航</a>
 	<a href=https://www.processon.com/diagrams>ProcessOn在线作图</a>
