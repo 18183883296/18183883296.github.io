@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+    <title>Sunrise的个人主页</title>
+    <meta name="description" content="期待与更多的人相遇！">
+    <meta name="keywords" content="Yane星球yane.cc">
+    <link rel="apple-touch-icon-precomposed" href="images/avatar.png">
+    <link rel="stylesheet" type="text/css" href="css/h.css">
+    <link rel="stylesheet" type="text/css" href="css/n.css">
+</head>
+
+<body>
+    <style>
+        .toast-bottom-center {
+            position: absolute;
+            left: 30px;
+            right: 10px;
+            top: 20px;
+        }
+    </style>
+
+    <div class="background">
+        <canvas id="startrack"></canvas>
+        <div class="cover"></div>
+    </div>
+    <div class="main">
+        <div class="ch intro">
+            <div class="container">
+                <div class="hello">
+                    <h1 id="slogan">思考中...</h1>
+                    <h2>
+                        <div class="circle"> <span></span> <span></span>
+                            <span></span>
+                        </div>趣奇资源网
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="ch about">
+            <div class="container">
+                <h2 class="chtitle">Who is <span>趣奇资源网</span>www.quqizy.com</h2>
+                <div class="clear">
+                    <div class="introduct">
+                        <img class="avatar" src="images/logo.jpg">
+                        <P> 不要被别人的节奏打乱了，因为乱世中亦有侠客</p>
+                        <p style="padding-bottom:1em;">How lucky to meet you!</p>
+                        <p>你好，I am 我们趋行在人生这个亘古的旅行</p>
+                        <p>就是要在坎坷中奔跑，在在挫折里涅槃</p>
+
+                <!-- 第二页 - 关于本站 -->
+                <div id="nav02">
+                    <div class="nav02_bg">
+                        <div class="nav02_bt">关于本站</div>
+                    </div>
+                    <!-- 站长资料 -->
+                    <div class="nav02_kj" style="height: 600px;">
+                        <h3>😁站/长/资/料</h3>
+                        <div class="nav02_grzl_headimg">
+                            <img src="img/tx.jpg" alt="[头像]">
+                            <a href="mailto:admin@cnm.sb" target="_blank" rel="noopener noreferrer">联系站长</a>
+                        </div>
+                        <div class="nav02_grzl_txt">
+                            <p>网名：秃鼎程序员</p>
+                            <p>邮箱：(站长同款邮箱，免费申请)</p>
+                            <p>性别：boy</p>
+                            <p>年龄：不告诉你 [一位有理想的青少年]</p>
+                            <p>特长：腿特长</p>
+                            <p>爱好：音乐、运动、设计、摄影、等……</p>
+                            <p>性格：落落大方</p>
+                            <p>梦想：实现财富自由</p>
+                            <p>语录：凡心所向，素履所往，生如逆旅，一苇以航。——《尘曲》</p>
+                            <p>语录：合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。——《道德经·第六十四章》</p>
+
+                        </div>
+                    </div>
+                    <!-- 个人介绍 -->
+                    <div class="nav02_kj">
+                        <h3>😁个/人/介/绍</h3>
+
+                        <p>
+                            本人学识渊博，经验丰富，代码风骚，效率恐怖。C/C＋＋，java，php无不精通，熟练掌握各种框架。
+                        </p>
+                        <p>
+                            会DDOS一秒钟死一个站，会注入，会上传，会Xss，会破解，会嗅探，会开发，会业务，会运维，会渗透。互联网内，我无处不在。
+                        </p>
+                        <p>
+                            全国漏洞认识深刻，熟练掌握各种操作系统内核。认真学习过《黑客攻防技术宝典》，《逆向工程》，《游戏waigua攻防艺术》等专业书籍。深山苦练十余载，一天只睡2小时。
+                        </p>
+                        <p>
+                            听指挥，执行快，脾气好，不喷人，操作虎，意识强，渗透快，shell多，能过狗，能过盾。
+                        </p>
+                        <p>
+                            千里之外取服务器首级，瞬息之间爆管理员狗头，压安全狗如压草芥。电话通知出Bug后，秒登vpn，千里之外定位问题，瞬息之间修复上线。
+                        </p>
+                        <p>
+                            只有你想不到的，没有我做不到的。
+                        </p>
+                        <p>
+                            以上都是吹的，我只会划水摸鱼，我是个废物。
+                        </p>
+                        <p>
+                            &nbsp;
+                        </p>
+                        <p>
+                            &nbsp;
+                        </p>
+
+                    </div>
+
+                    <!-- 每日必做 -->
+                    <div class="nav02_kj mb04">
+                        <h3>每/日/必/做</h3>
+                        <div id="ejn">
+                            <a href="javascript:;">摸鱼摸鱼，摸鱼摸鱼，摸鱼摸鱼，摸鱼摸鱼，摸鱼摸鱼，摸鱼摸鱼</a>
+                            <a href="javascript:;">划水划水，划水划水，划水划水，划水划水，划水划水，划水划水</a>
+                            <a href="javascript:;">闲聊闲聊，闲聊闲聊，闲聊闲聊，闲聊闲聊，闲聊闲聊，闲聊闲聊</a>
+                            <a href="javascript:;">abcdefghigklmnopqrstuvwxyz</a>
+                            <a href="javascript:;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</a>
+                        </div>
+                    </div>
+                    <!-- 到底了-提示 -->
+                    <p class="ebpx">--- 暂时先展示这么多啦 ---</p>
+                </div>
+                        <div class="chatbox">
+                            <div class="line loading"> <span></span>
+                                <span></span> <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="skill clear">
+                        <li>
+                            <p>HTML5/CSS3</p>
+                            <div class="progress">
+                                <div style="width:100%;"></div>
+                                <span>制作网站程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>JavaScript/Typescript</p>
+                            <div class="progress">
+                                <div style="width:55%;"></div>
+                                <span>使用现代轮子程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>PHP</p>
+                            <div class="progress">
+                                <div style="width:98%;"></div>
+                                <span>赞美最好的语言程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>数字设计</p>
+                            <div class="progress">
+                                <div style="width:65%;">
+                                </div><span>让自己舒服程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>世界</p>
+                            <div class="progress">
+                                <div style="width:20%;"></div>
+                                <span>观测世界程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>搞事情</p>
+                            <div class="progress">
+                                <div style="width:82%;"></div>
+                                <span>让事情发生程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>魔法</p>
+                            <div class="progress">
+                                <div style="width:12%;"></div>
+                                <span>和普通人相同程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>MoePower</p>
+                            <div class="progress">
+                                <div style="width:99%;"></div>
+                                <span>成为萌二程度的能力</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="find ch">
+            <div class="container links">
+                <h2 class="chtitle">我走过的地方<span>地方</span></h2>
+                <div class="clear col-3">
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <span>趣奇资源网</span> </div>
+                        </div>
+                    </a>
+                    <a href="http://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <span>趣奇资源网</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <span>趣奇资源网</span> </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-qq"></i>
+                                <span>QQ</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-mail"></i> <span>Mail</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#e6162d"></div>
+                            <div class="inner"> <i class="icon-weibo"></i> <span>Weibo</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f9a2a8"></div>
+                            <div class="inner"> <i class="icon-bilibili"></i>
+                                <span>Bilibili</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-twitter"></i> <span>Twitter</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#0f88eb"></div>
+                            <div class="inner"> <i class="icon-zhihu"></i>
+                                <span>知乎</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f09199"></div>
+                            <div class="inner"> <i class="icon-bookmark"></i> <span>Bangumi</span> </div>
+                        </div>
+                    </a> <a href="http://music.163.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f12d35"></div>
+                            <div class="inner"> <i class="icon-netease_music"></i>
+                                <span>网易云音乐</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#353535"></div>
+                            <div class="inner"> <i class="icon-github"></i> <span>Github</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.quqizy.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#b600ff"></div>
+                            <div class="inner"> <i class="icon-instagram"></i> <span>Instgram</span> </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gate ch">
+            <div class="container links">
+                <div class="footer ch">
+                    <div class="container">
+                        <h3>只要许愿</h3>
+                        <p>就会成功，对吧</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330
+                            height=86
+                            src="http://music.163.com/outchain/player?type=2&id=548633609&auto=1&height=66"></iframe>
+                        <p class="c"><a href="https://beian.miit.gov.cn/">浙ICP备2022025758号 </a></p>
+                    </div>
+                </div>
+                <script src="js/page.3a0791a3.js"></script>
+                <script type="text/javascript" src="js/stats.js" charset="UTF-8">
+                </script>
+
+</body>
+
+</html>
