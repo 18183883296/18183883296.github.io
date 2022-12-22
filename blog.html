@@ -1,9 +1,6 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="zh"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="zh"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh"> <!--<![endif]-->
+<html class="no-js" lang="zh-CN">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +8,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -22,6 +34,11 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
+
 	</head>
 	<body>
 	<div id="fh5co-page">
@@ -31,8 +48,8 @@
 			<h1 id="fh5co-logo"><a href="index.html">博客</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li class="fh5co-active"><a href="index.html">网站首页</a></li>
-					<li><a href="#">最新博客</a></li>
+					<li><a href="index.html">网站首页</a></li>
+					<li class="fh5co-active"><a href="blog.html">最新博客</a></li>
 					<li><a href="photos.html">图片展示</a></li>
 					<li><a href="about.html">详细介绍</a></li>
 					<li><a href="contact.html">我要留言</a></li>
@@ -42,10 +59,10 @@
 			<div class="fh5co-footer">
 				<p>网站设计 · 课程设计<br>Yane&#x661F;&#x7403; &#x660E;&#x6615;<a target="_blank" href="https://www.jlu.edu.cn/"><br>&#x5409;&#x6797;&#x5927;&#x5B66;</a></p>
 				<ul>
-					<li><a href="https://www.zhihu.com/search?type=content&q=facebook"><i class="icon-facebook2"></i></a></li>
-					<li><a href="https://www.zhihu.com/search?type=content&q=twitter"><i class="icon-twitter2"></i></a></li>
-					<li><a href="https://www.zhihu.com/search?type=content&q=instagram"><i class="icon-instagram"></i></a></li>
-					<li><a href="https://www.zhihu.com/search?type=content&q=linkedin"><i class="icon-linkedin2"></i></a></li>
+					<li><a href="#"><i class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i class="icon-twitter2"></i></a></li>
+					<li><a href="#"><i class="icon-instagram"></i></a></li>
+					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 				</ul>
 			</div>
 
@@ -57,7 +74,7 @@
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="https://mp.weixin.qq.com/s/H0vZbyZa1yTs-6zS7ww6xQ" class="blog-img"><img src="images/new-1.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="https://mp.weixin.qq.com/s/H0vZbyZa1yTs-6zS7ww6xQ" class="blog-img"><img src="images/new-1.jpg" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="https://mp.weixin.qq.com/s/H0vZbyZa1yTs-6zS7ww6xQ">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
@@ -68,18 +85,18 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="gallery/cloud/index.html" class="blog-img"><img src="images/new-2.gif" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="gallery/cloud/index.html" class="blog-img"><img src="images/new-2.gif" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="gallery/cloud/index.html">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
-								<p>大列巴融合中西方文化，<br>一根足足1斤，果然还是俄罗斯大列巴深得我心（胃）</p>
+								<p>传统上，人们会在平安夜装饰圣诞树，12夜之后移走。<br>提前和延迟这个日期都被认为是不吉利的。</p>
 								<a href="gallery/cloud/index.html" class="lead">Read More <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="https://mp.weixin.qq.com/s/naFmTKd4_wgGoqIt6N-aGA" class="blog-img"><img src="images/new-3.png" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="https://mp.weixin.qq.com/s/naFmTKd4_wgGoqIt6N-aGA" class="blog-img"><img src="images/new-3.png" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="https://mp.weixin.qq.com/s/naFmTKd4_wgGoqIt6N-aGA">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
@@ -90,7 +107,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="https://mp.weixin.qq.com/s/awg4H0MNVvxYBfuMYfUbwQ" class="blog-img"><img src="images/new-4.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="https://mp.weixin.qq.com/s/awg4H0MNVvxYBfuMYfUbwQ" class="blog-img"><img src="images/new-4.jpg" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="https://mp.weixin.qq.com/s/awg4H0MNVvxYBfuMYfUbwQ">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
@@ -101,6 +118,7 @@
 					</div>
 				</div>
 			</div>
+		
 			<div id="get-in-touch">
 				<div class="fh5co-narrow-content">
 					<div class="row">
@@ -119,6 +137,22 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
 	</body>
 </html>
 

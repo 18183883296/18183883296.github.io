@@ -1,18 +1,27 @@
-﻿
+
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="zh"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="zh"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh"> <!--<![endif]-->
-<head>
+<html class="no-js" lang="zh-CN">
+	<head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 最高版本渲染模式 -->
-	<title>Sunrise网站设计主页</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sunrise个人网站主页</title>
 	<!-- 让当前viewport的宽度等于设备的宽度，允许用户缩放 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
 	<meta name="description" content="" /> <!-- 网页描述文字 -->
 	<meta name="keywords" content="" /> <!-- 网页关键字 -->
-    <meta http-equiv="refresh" content="60">
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -23,6 +32,11 @@
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
 
 	</head>
 	<body>
@@ -45,10 +59,10 @@
 				<p>网站设计 · 课程设计<br>Yane&#x661F;&#x7403; &#x660E;&#x6615;<a target="_blank" href="https://www.jlu.edu.cn/"><br>&#x5409;&#x6797;&#x5927;&#x5B66;</a></p>
 				<ul>
 					<!-- icons图标官网: http://ionicons.com/ -->
-					<li><a href="https://www.zhihu.com/search?type=content&q=facebook"><i class="icon-facebook2"></i></a></li>
-					<li><a href="https://www.zhihu.com/search?type=content&q=twitter"><i class="icon-twitter2"></i></a></li>
-					<li><a href="https://www.zhihu.com/search?type=content&q=instagram"><i class="icon-instagram"></i></a></li>
-					<li><a href="https://www.zhihu.com/search?type=content&q=linkedin"><i class="icon-linkedin2"></i></a></li>
+					<li><a href="#"><i class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i class="icon-twitter2"></i></a></li>
+					<li><a href="#"><i class="icon-instagram"></i></a></li>
+					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 				</ul>
 			</div>
 
@@ -59,11 +73,48 @@
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
 				   	<li style="background-image: url(images/img_bg_1.jpg);">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>Intuitive <strong></strong> is How Give We the User New Superpowers</h1>
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="http://www.xiaoerhu.com"> <i class="icon-monitor"></i> Live Preview</a> <a class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	<li style="background-image: url(images/img_bg_2.jpg);">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>We are Happy to Create Newest Modern Websites</h1>
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="http://www.xiaoerhu.com"> <i class="icon-monitor"></i> Live Preview</a> <a class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	<li style="background-image: url(images/img_bg_3.jpg);">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>Download our Free HTML5 Bootstrap Template</h1>
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="http://www.xiaoerhu.com"> <i class="icon-monitor"></i> Live Preview</a> <a class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
 				   	</li>
 				  	</ul>
 			  	</div>
 			</aside>
-
+			
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Functions</h2>
 				<div class="row">
@@ -73,7 +124,7 @@
 								<i class="icon-settings"></i>
 							</div>
 							<div class="fh5co-text">
-								<h3>Strategy</h3>
+								<h3>Source</h3>
 								<p>来自微信公众号的一些极好的文章</p>
 							</div>
 						</div>
@@ -107,7 +158,7 @@
 								<i class="icon-params"></i>
 							</div>
 							<div class="fh5co-text">
-								<h3>Expertise</h3>
+								<h3>Feature</h3>
 								<p>在套用现有CSS模板的基础上，灵活运用网站设计课程的教学内容进行扩展</p>
 							</div>
 						</div>
@@ -115,11 +166,11 @@
 				</div>
 			</div>
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">最新博客</h2>
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="https://mp.weixin.qq.com/s/H0vZbyZa1yTs-6zS7ww6xQ" class="blog-img"><img src="images/new-1.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="https://mp.weixin.qq.com/s/H0vZbyZa1yTs-6zS7ww6xQ" class="blog-img"><img src="images/new-1.jpg" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="https://mp.weixin.qq.com/s/H0vZbyZa1yTs-6zS7ww6xQ">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
@@ -130,18 +181,18 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="gallery/cloud/index.html" class="blog-img"><img src="images/new-2.gif" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="gallery/cloud/index.html" class="blog-img"><img src="images/new-2.gif" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="gallery/cloud/index.html">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
-								<p>大列巴融合中西方文化，<br>一根足足1斤，果然还是俄罗斯大列巴深得我心（胃）</p>
+								<p>传统上，人们会在平安夜装饰圣诞树，12夜之后移走。<br>提前和延迟这个日期都被认为是不吉利的。</p>
 								<a href="gallery/cloud/index.html" class="lead">Read More <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="https://mp.weixin.qq.com/s/naFmTKd4_wgGoqIt6N-aGA" class="blog-img"><img src="images/new-3.png" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="https://mp.weixin.qq.com/s/naFmTKd4_wgGoqIt6N-aGA" class="blog-img"><img src="images/new-3.png" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="https://mp.weixin.qq.com/s/naFmTKd4_wgGoqIt6N-aGA">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
@@ -152,7 +203,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="https://mp.weixin.qq.com/s/awg4H0MNVvxYBfuMYfUbwQ" class="blog-img"><img src="images/new-4.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<a href="https://mp.weixin.qq.com/s/awg4H0MNVvxYBfuMYfUbwQ" class="blog-img"><img src="images/new-4.jpg" class="img-responsive"></a>
 							<div class="desc">
 								<h3><a href="https://mp.weixin.qq.com/s/awg4H0MNVvxYBfuMYfUbwQ">最新推文</a></h3>
 								<span><small>by Admin </small><i class="icon-comment"></i></span>
@@ -181,6 +232,22 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
 	</body>
 </html>
 
